@@ -16,10 +16,10 @@ function App() {
     github: '',
   })
 
-  // const [education, setEducation] = useState([])
+  const [education, setEducation] = useState([])
 
-  const data = { personal }
-  const setData = { setPersonal }
+  const data = { personal, education }
+  const setData = { setPersonal, setEducation }
 
   return (
     <div className='app'>

@@ -19,6 +19,8 @@
     flex-direction: column;
 }
 
+/* Personal */
+
 .preview-personal {
     display: flex;
     flex-direction: column;
@@ -34,4 +36,28 @@
 }
 a {
     color: rgb(78, 77, 77);
+}
+
+/* Education */
+
+.preview-education {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+}
+.preview-education > h2 {
+    font-size: 30px;
+    padding-bottom: 5px;
+    color: rgb(78, 77, 77);
+    border-bottom: 2px rgb(78, 77, 77) solid;
+}
+.edu-detail > span, .edu-date {
+    color: rgb(78, 77, 77);
+}
+
+.preview-education-entry {
+    margin: 10px 0px 10px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
