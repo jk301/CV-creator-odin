@@ -1,0 +1,37 @@
+/* preview.css */
+
+/* for scrolling */
+.preview-container {
+    height: 100vh;
+    overflow-y: auto;
+    min-width: 210mm;
+    flex-shrink: 0; /* prevents it from shrinking when window small */
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.4);
+}
+.preview {
+    background-color: white;
+    padding: 40px;
+    /* A4 size */
+    width: 210mm;
+    min-height: 297mm;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.preview-personal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 20px;
+}
+.preview-personal-links {
+    white-space: nowrap;
+    font-size: 15px;
+    color: rgb(78, 77, 77);
+}
+a {
+    color: rgb(78, 77, 77);
+}
