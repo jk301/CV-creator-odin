@@ -12,7 +12,7 @@ export function SkillSection ({ skill, setSkill }) {
     }
 
     function addEntry () {
-        return setSkill(previous => [...previous, {type: "", kill: ""}])
+        return setSkill(previous => [...previous, {type: "", desc: ""}])
     }
 
     function removeEntry (index) {
@@ -41,8 +41,8 @@ export function SkillSection ({ skill, setSkill }) {
                         <label>Skill</label>
                             <input 
                                 type="text"
-                                name="kill"
-                                value={entry.kill}
+                                name="desc"
+                                value={entry.desc}
                                 onChange={(e) => handleInputChange(e, index)}
                                 placeholder="good with cats (debatable)"
                             />
