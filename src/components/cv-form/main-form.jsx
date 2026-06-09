@@ -3,6 +3,7 @@ import "../../styles/main-form.css"
 import { useState } from "react"
 import { PersonalSection } from "./personal-section.jsx"
 import { EducationSection } from "./education-section.jsx"
+import { ExperienceSection } from "./experience-section.jsx"
 
 export function MainForm ({ data, setData}) {
     const [openSection, setOpenSection] = useState([])
@@ -42,6 +43,18 @@ export function MainForm ({ data, setData}) {
                 </div>
                 {openSection.includes('education') && (
                     <EducationSection education={data.education} setEducation={setData.setEducation} />
+                )}
+
+            </div>
+
+            <div className="form-card">
+
+                <div className="form-card-header" onClick={() => toggleSection('experience')}>
+                    <h2>Experience Information</h2>
+                    <span>{openSection.includes('experience') ? '▲' : '▼'}</span>
+                </div>
+                {openSection.includes('experience') && (
+                    <ExperienceSection experience={data.experience} setExperience={setData.setExperience} />
                 )}
 
             </div>

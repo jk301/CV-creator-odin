@@ -61,3 +61,35 @@ a {
     justify-content: space-between;
     align-items: center;
 }
+
+/* Experience */
+
+.preview-experience {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+}
+
+.preview-experience > h2 {
+    font-size: 30px;
+    padding-bottom: 5px;
+    color: rgb(78, 77, 77);
+    border-bottom: 2px rgb(78, 77, 77) solid;
+}
+
+.exp-detail {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.exp-wrapper {
+    margin: 10px 0px 10px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.exp-detail > span, .exp-date {
+    color: rgb(78, 77, 77);
+}

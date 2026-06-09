@@ -17,9 +17,10 @@ function App() {
   })
 
   const [education, setEducation] = useState([])
+  const [experience, setExperience] = useState([])
 
-  const data = { personal, education }
-  const setData = { setPersonal, setEducation }
+  const data = { personal, education, experience }
+  const setData = { setPersonal, setEducation, setExperience }
 
   return (
     <div className='app'>
