@@ -1,0 +1,48 @@
+/* skill-section.css */
+
+/* project-section.css */
+
+.skill-section {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    padding-top: 0px;
+    gap: 20px;
+}
+
+.skill-entry {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    border-bottom: 2px solid grey;
+}
+
+.form-field {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.form-field label {
+    color: rgb(100, 100, 100);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+input {
+    padding: 8px 12px;
+    font-size: 20px;
+    border: 1px solid rgb(128, 128, 128);
+    border-radius: 6px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+input:focus {
+    border-color: rgb(100, 100, 255);
+}
