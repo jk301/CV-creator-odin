@@ -27,7 +27,7 @@ export function MainForm ({ data, setData}) {
 
                 <div className="form-card-header" onClick={() => toggleSection('personal')}>
                     <h2>Personal Information</h2>
-                    <span>{openSection.includes('personal') ? '▲' : '▼'}</span>
+                    <span>{openSection.includes('personal') ? '—' : '▼'}</span>
                 </div>
                 {openSection.includes('personal') && (
                     <PersonalSection personal={data.personal} setPersonal={setData.setPersonal} />
@@ -39,7 +39,7 @@ export function MainForm ({ data, setData}) {
 
                 <div className="form-card-header" onClick={() => toggleSection('education')}>
                     <h2>Educational Information</h2>
-                    <span>{openSection.includes('education') ? '▲' : '▼'}</span>
+                    <span>{openSection.includes('education') ? '—' : '▼'}</span>
                 </div>
                 {openSection.includes('education') && (
                     <EducationSection education={data.education} setEducation={setData.setEducation} />
@@ -51,7 +51,7 @@ export function MainForm ({ data, setData}) {
 
                 <div className="form-card-header" onClick={() => toggleSection('experience')}>
                     <h2>Experience Information</h2>
-                    <span>{openSection.includes('experience') ? '▲' : '▼'}</span>
+                    <span>{openSection.includes('experience') ? '—' : '▼'}</span>
                 </div>
                 {openSection.includes('experience') && (
                     <ExperienceSection experience={data.experience} setExperience={setData.setExperience} />
