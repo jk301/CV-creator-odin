@@ -93,3 +93,47 @@ a {
 .exp-detail > span, .exp-date {
     color: rgb(78, 77, 77);
 }
+
+/* Project */
+
+.preview-project {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+}
+
+.preview-project > h2 {
+    font-size: 30px;
+    padding-bottom: 5px;
+    color: rgb(78, 77, 77);
+    border-bottom: 2px rgb(78, 77, 77) solid;
+}
+
+.pro-detail {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.pro-wrapper {
+    margin: 10px 0px 10px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.preview-project-entry {
+    margin: 10px 0px 10px 0px;
+}
+
+.pro-detail > span {
+    color: rgb(78, 77, 77);
+}
+
+.p-name {
+    font-size: 20px;
+    font-weight: 900;
+}
+.preview-project-entry > p {
+    margin: 5px 0px 5px 0px;
+}

@@ -6,6 +6,7 @@ export function Preview ({ data }) {
     const hasPersonal = Object.values(data.personal).some(value => value !== '')
     const hasEducation = data.education.length > 0
     const hasExperience = data.experience.length > 0
+    const hasProject = data.project.length > 0
 
     const links = [
         data.personal.phone && <span>{data.personal.phone}</span>,
@@ -65,6 +66,34 @@ export function Preview ({ data }) {
                                     </div>
                                     <div className="exp-date">
                                         {entry.date && <span>{entry.date}</span>}
+                                    </div>
+                                </div>
+                                {
+                                    entry.bullets.length > 0 && 
+                                    entry.bullets.map((bullet, b) => 
+                                        <p key={b}>• {bullet}</p>
+                                    )
+                                }
+                            </div>
+                        ))}
+                    </div>
+                }
+
+                {
+                    hasProject && 
+                    <div className="preview-project">
+                        <h2>Project</h2>
+                        {data.project.map((entry, index) => (
+                            <div className="preview-project-entry" key={index}>
+                                <div className="pro-wrapper">
+                                    <div className="pro-detail">
+                                        {
+                                            entry.link 
+                                                ? <a className={'p-name'} href={entry.link}>{entry.name}</a>
+                                                : <h3>{entry.name}</h3>
+                                        }
+                                        {entry.name && entry.stack && <p> | </p>}
+                                        {entry.stack && <span>{entry.stack}</span>}
                                     </div>
                                 </div>
                                 {
