@@ -7,6 +7,7 @@ export function Preview ({ data }) {
     const hasEducation = data.education.length > 0
     const hasExperience = data.experience.length > 0
     const hasProject = data.project.length > 0
+    const hasSkill = data.skill.length > 0
 
     const links = [
         data.personal.phone && <span>{data.personal.phone}</span>,
@@ -16,6 +17,8 @@ export function Preview ({ data }) {
     ].filter(Boolean)
 
     return (
+
+    <div className="preview-wrap">
         <div className="preview-container">
             <div className="preview">
 
@@ -107,8 +110,26 @@ export function Preview ({ data }) {
                     </div>
                 }
 
+                {
+                    hasSkill && 
+                    <div className="preview-skill">
+                        <h2>Skill</h2>
+                        {data.skill.map((entry, index) => (
+                            <div className="preview-skill-entry" key={index}>
+                                <div className="ski-detail">
+                                    •
+                                    {entry.type && <h3> {entry.type}:  </h3>}
+                                    {entry.desc && <span>{entry.desc}</span>}
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                }
+
 
             </div>
         </div>
+        <button className="green-but" onClick={() => window.print()}>Download CV</button>
+    </div>
     )
 }
