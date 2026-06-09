@@ -5,6 +5,7 @@ import { PersonalSection } from "./personal-section.jsx"
 import { EducationSection } from "./education-section.jsx"
 import { ExperienceSection } from "./experience-section.jsx"
 import { ProjectSection } from "./project-section.jsx"
+import { SkillSection } from "./skill-section.jsx"
 
 export function MainForm ({ data, setData}) {
     const [openSection, setOpenSection] = useState([])
@@ -68,6 +69,18 @@ export function MainForm ({ data, setData}) {
                 </div>
                 {openSection.includes('project') && (
                     <ProjectSection project={data.project} setProject={setData.setProject} />
+                )}
+
+            </div>
+
+            <div className="form-card">
+
+                <div className="form-card-header" onClick={() => toggleSection('skill')}>
+                    <h2>Skill Information</h2>
+                    <span>{openSection.includes('skill') ? '—' : '▼'}</span>
+                </div>
+                {openSection.includes('skill') && (
+                    <SkillSection skill={data.skill} setSkill={setData.setSkill} />
                 )}
 
             </div>
