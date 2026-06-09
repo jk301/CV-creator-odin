@@ -37,3 +37,28 @@ button {
 .green-but:hover {
   background-color: rgb(3, 88, 3);
 }
+
+@media print {
+  @page {
+    margin: 0mm;
+  }
+  .main-form {
+    display: none !important;
+  }
+  .preview-wrap {
+    position: static !important;
+    align-self: auto !important;
+  }
+  .preview-container {
+    box-shadow: none !important;
+    height: auto !important;
+    overflow: visible !important;
+    min-width: 0 !important;
+  }
+  .preview {
+    min-height: 0 !important;
+  }
+  button {
+    display: none !important;
+  }
+}
