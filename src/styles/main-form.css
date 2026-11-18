@@ -23,8 +23,8 @@
     margin-bottom: 20px;
 }
 .form-card-header {
-    background-color: #323232;
-    color: #DDD0C8;
+    background-color: white;
+    color: black;
     padding: 20px;
     display: flex;
     justify-content: space-between;
